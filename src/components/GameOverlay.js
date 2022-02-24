@@ -6,15 +6,7 @@ const GameOverlay = ({ onRestart, board }) => {
   } else if (board.hasLost()) {
     return (
       <div className="game-over" onClick={onRestart}>
-        <img
-          src={TryAgainLogo}
-          alt="Try Again"
-          style={{  
-            width: "100%",
-            height: "100%",
-            cursor: "pointer",
-          }}
-        />
+        <img className="game-over__image" src={TryAgainLogo} alt="Try Again" />
       </div>
     );
   }
