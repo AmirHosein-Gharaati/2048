@@ -3,6 +3,7 @@ import useEvent from "../helper/hooks/useEvents";
 import { Board } from "../helper";
 import Tile from "./Tile";
 import Cell from "./Cell";
+import Button from "./Buttons";
 import GameOverlay from "./GameOverlay";
 
 const BoardView = () => {
@@ -12,18 +13,22 @@ const BoardView = () => {
     setBoard(new Board());
   };
 
+  const resetBoard = (direction) => {
+    const boardClone = Object.assign(
+      Object.create(Object.getPrototypeOf(board)),
+      board
+    );
+    const newBoard = boardClone.move(direction);
+    setBoard(newBoard);
+  };
+
   const handleKeyDown = (event) => {
     if (board.hasWon()) return;
 
     // keydown for: left, up, right, down
     if (event.keyCode >= 37 && event.keyCode <= 40) {
       const direction = event.keyCode - 37;
-      const boardClone = Object.assign(
-        Object.create(Object.getPrototypeOf(board)),
-        board
-      );
-      const newBoard = boardClone.move(direction);
-      setBoard(newBoard);
+      resetBoard(direction);
     }
   };
 
@@ -48,9 +53,7 @@ const BoardView = () => {
   return (
     <div>
       <div className="details-box">
-        <div className="button" onClick={resetGame}>
-          New Game
-        </div>
+        <Button text="New Game" onClick={resetGame} />
         <div className="score-box">
           <div className="score-header">Score: </div>
           <div>{board.score}</div>
