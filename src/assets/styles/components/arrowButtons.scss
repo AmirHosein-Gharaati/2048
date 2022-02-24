@@ -1,12 +1,13 @@
 .arrow-buttons-wrapper {
   position: relative;
-  margin-top: 50px;
   height: 120px;
-  width: 100%;
+  width: 280px;
+  margin: auto;
+  margin-top: 50px;
 
   .arrow {
-    width: 20%;
-    height: 20%;
+    width: 40px;
+    height: 40px;
     text-align: center;
     margin: auto;
   }
@@ -25,15 +26,15 @@
 
   .arrow-up {
     position: absolute;
-    top: 0;
-    left: 40%;
-    right: 40%;
+    top: -15px;
+    left: 0;
+    right: 0;
   }
 
   .arrow-down {
     position: absolute;
-    left: 40%;
-    right: 40%;
+    left: 0;
+    right: 0;
     bottom: 0;
   }
 }
