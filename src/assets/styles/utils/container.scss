@@ -1,9 +1,10 @@
 .container {
-  margin: auto;
+  position: relative;
 }
 
 @media screen and (max-width: 960px) {
   .container {
     transform: scale(0.85);
+    left: 3%;
   }
 }
