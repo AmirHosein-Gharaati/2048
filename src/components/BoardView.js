@@ -48,7 +48,7 @@ const BoardView = () => {
   return (
     <div>
       <div className="details-box">
-        <div className="reset-button" onClick={resetGame}>
+        <div className="button" onClick={resetGame}>
           New Game
         </div>
         <div className="score-box">
