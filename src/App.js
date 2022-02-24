@@ -1,4 +1,4 @@
-import BoardView from "./components/Board";
+import BoardView from "./components/BoardView";
 
 function App() {
   return (
