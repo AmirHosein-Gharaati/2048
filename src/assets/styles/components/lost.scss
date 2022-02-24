@@ -1,0 +1,24 @@
+.try-again {
+  z-index: 10;
+  height: 100px;
+  width: 100px;
+  background-image: url(../../images/try-again.gif);
+}
+
+.game-over {
+  background-size: contain;
+  background-image: url(../../images/game-over.gif);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  text-align: center;
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+}

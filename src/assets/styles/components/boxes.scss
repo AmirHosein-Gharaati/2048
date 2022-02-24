@@ -1,0 +1,19 @@
+.details-box {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.score-header {
+  font-size: 50%;
+}
+
+.score-box {
+  background-color: #3d2963;
+  color: rgba(255, 255, 255, 0.5);
+  min-width: 50px;
+  width: 70px;
+  padding: 5px 15px;
+  border-radius: 7px;
+}

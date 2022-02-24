@@ -1,0 +1,87 @@
+.tile {
+  @include cell;
+
+  position: absolute;
+
+  &.merged {
+    display: none;
+
+    &.isMoving {
+      display: inline;
+    }
+  }
+
+  .new {
+    @include overlay-animation;
+  }
+}
+
+.tile0 {
+  background-color: #dcb;
+}
+
+.tile2 {
+  background-color: #eee;
+  background-image: url(../../images/2.gif);
+}
+
+.tile4 {
+  background-color: #eec;
+  background-image: url(../../images/4.gif);
+}
+
+.tile8 {
+  color: #ffe;
+  background-image: url(../../images/8.gif);
+}
+
+.tile16 {
+  color: #ffe;
+  background-image: url(../../images/16.gif);
+}
+
+.tile32 {
+  color: #ffe;
+  background-image: url(../../images/32.gif);
+}
+
+.tile64 {
+  color: #ffe;
+  background-image: url(../../images/64.gif);
+}
+
+.tile128 {
+  color: #ffe;
+  background-image: url(../../images/128.gif);
+}
+
+.tile256 {
+  color: #ffe;
+  background-image: url(../../images/256.gif);
+  font-size: 45px;
+}
+
+.tile512 {
+  color: #ffe;
+  background-image: url(../../images/512.gif);
+  font-size: 45px;
+}
+
+.tile1024 {
+  color: #fff;
+  background-image: url(../../images/1024.gif);
+  font-size: 35px;
+}
+
+.tile2048 {
+  position: absolute;
+  background-size: contain;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 0px;
+  color: #fff;
+  background-image: url(../../images/2048.gif);
+  font-size: 35px;
+}

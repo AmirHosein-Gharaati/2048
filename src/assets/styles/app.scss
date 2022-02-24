@@ -1,0 +1,38 @@
+@font-face {
+  font-family: "Clear Sans";
+  src: url("../fonts/clear-sans.ttf") format("truetype");
+}
+
+// mixins
+@import "./mixins/cell.scss";
+@import "./mixins/overlayAnimation.scss";
+
+// utils
+@import "./utils/button.scss";
+@import "./utils/overlay.scss";
+@import "./utils/rowAndColumns.scss";
+
+// components
+@import "./components/board.scss";
+@import "./components/boxes.scss";
+@import "./components/lost.scss";
+@import "./components/tile.scss";
+@import "./components/cell.scss";
+
+body {
+  display: flex;
+  background-color: #57407c;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  font-family: "Clear Sans", sans-serif;
+  font-size: 21px;
+}
+
+.text {
+  order: 2;
+  padding-top: 40px;
+  width: 440px;
+  font-weight: bold;
+}
