@@ -30,9 +30,13 @@ body {
   border-radius: 7px;
   outline: none;
   position: relative;
+
+  .cell {
+    user-select: none;
+    cursor: default;
+  }
 }
 
-.board .cell,
 .tile {
   user-select: none;
   cursor: default;
@@ -45,7 +49,7 @@ body {
   justify-content: space-between;
 }
 
-.resetButton {
+.reset-button {
   background-color: #3d2963;
   color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
@@ -212,6 +216,7 @@ body {
   border-radius: 7px;
 }
 
+// TODO
 .tryAgain {
   background-color: #876;
   color: #fff;
@@ -225,7 +230,7 @@ body {
   border: 2px solid white;
 }
 
-.gameOver {
+.game-over {
   background-size: contain;
   background-image: url(../images/game-over.gif);
   position: absolute;
