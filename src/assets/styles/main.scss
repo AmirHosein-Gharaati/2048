@@ -30,16 +30,6 @@ body {
   border-radius: 7px;
   outline: none;
   position: relative;
-
-  .cell {
-    user-select: none;
-    cursor: default;
-  }
-}
-
-.tile {
-  user-select: none;
-  cursor: default;
 }
 
 .details-box {
@@ -172,14 +162,14 @@ body {
 
 .tile {
   position: absolute;
-}
 
-.tile.merged {
-  display: none;
-}
+  &.merged {
+    display: none;
 
-.tile.merged.isMoving {
-  display: inline;
+    &.isMoving {
+      display: inline;
+    }
+  }
 }
 
 .tile.new,
@@ -216,20 +206,6 @@ body {
   border-radius: 7px;
 }
 
-// TODO
-.tryAgain {
-  background-color: #876;
-  color: #fff;
-  height: 40px;
-  width: 200px;
-  font-size: 20px;
-  font-weight: bold;
-  cursor: pointer;
-  border: none;
-  border-radius: 5px;
-  border: 2px solid white;
-}
-
 .game-over {
   background-size: contain;
   background-image: url(../images/game-over.gif);
@@ -242,6 +218,8 @@ body {
   text-align: center;
 }
 
-.overlay .message {
-  color: #666;
+.overlay {
+  .message {
+    color: #666;
+  }
 }
