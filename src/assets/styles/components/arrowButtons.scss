@@ -1,0 +1,39 @@
+.arrow-buttons-wrapper {
+  position: relative;
+  margin-top: 50px;
+  height: 120px;
+  width: 100%;
+
+  .arrow {
+    width: 20%;
+    height: 20%;
+    text-align: center;
+    margin: auto;
+  }
+
+  .arrow-left {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+  .arrow-right {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  .arrow-up {
+    position: absolute;
+    top: 0;
+    left: 40%;
+    right: 40%;
+  }
+
+  .arrow-down {
+    position: absolute;
+    left: 40%;
+    right: 40%;
+    bottom: 0;
+  }
+}

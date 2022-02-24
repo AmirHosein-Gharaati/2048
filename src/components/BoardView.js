@@ -64,6 +64,28 @@ const BoardView = () => {
         {tiles}
         <GameOverlay onRestart={resetGame} board={board} />
       </div>
+      <div className="arrow-buttons-wrapper">
+        <Button
+          classes="arrow arrow-left"
+          text="←"
+          onClick={() => resetBoard(0)}
+        />
+        <Button
+          classes="arrow arrow-up"
+          text="↑"
+          onClick={() => resetBoard(1)}
+        />
+        <Button
+          classes="arrow arrow-right"
+          text="→"
+          onClick={() => resetBoard(2)}
+        />
+        <Button
+          classes="arrow arrow-down"
+          text="↓"
+          onClick={() => resetBoard(3)}
+        />
+      </div>
     </div>
   );
 };
