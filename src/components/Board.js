@@ -1,24 +1,28 @@
-import Tile from "./Tile";
-import Cell from "./Cell";
-import { Board } from "../helper";
 import { useState } from "react";
 import useEvent from "../helper/hooks/useEvents";
+import { Board } from "../helper";
+import Tile from "./Tile";
+import Cell from "./Cell";
 import GameOverlay from "./GameOverlay";
 
 const BoardView = () => {
   const [board, setBoard] = useState(new Board());
 
+  const resetGame = () => {
+    setBoard(new Board());
+  };
+
   const handleKeyDown = (event) => {
-    if (board.hasWon()) {
-      return;
-    }
+    if (board.hasWon()) return;
+
+    // keydown for: left, up, right, down
     if (event.keyCode >= 37 && event.keyCode <= 40) {
-      let direction = event.keyCode - 37;
-      let boardClone = Object.assign(
+      const direction = event.keyCode - 37;
+      const boardClone = Object.assign(
         Object.create(Object.getPrototypeOf(board)),
         board
       );
-      let newBoard = boardClone.move(direction);
+      const newBoard = boardClone.move(direction);
       setBoard(newBoard);
     }
   };
@@ -40,10 +44,6 @@ const BoardView = () => {
     .map((tile, index) => {
       return <Tile tile={tile} key={index} />;
     });
-
-  const resetGame = () => {
-    setBoard(new Board());
-  };
 
   return (
     <div>
