@@ -51,7 +51,7 @@ const BoardView = () => {
     });
 
   return (
-    <div>
+    <div className="container">
       <div className="details-box">
         <Button text="New Game" onClick={resetGame} />
         <div className="score-box">
