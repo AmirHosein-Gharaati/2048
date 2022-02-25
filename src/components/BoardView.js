@@ -1,7 +1,7 @@
 import { useState } from "react";
 import useEvent from "../helper/hooks/useEvents";
 import { Board } from "../helper";
-import { Directions } from "../helper/enums";
+import { DIRECTIONS } from "../helper/enums";
 import Tile from "./Tile";
 import Cell from "./Cell";
 import Button from "./Buttons";
@@ -69,22 +69,22 @@ const BoardView = () => {
         <Button
           classes="arrow arrow-left"
           text="←"
-          onClick={() => updateBoard(Directions.left)}
+          onClick={() => updateBoard(DIRECTIONS.left)}
         />
         <Button
           classes="arrow arrow-up"
           text="↑"
-          onClick={() => updateBoard(Directions.up)}
+          onClick={() => updateBoard(DIRECTIONS.up)}
         />
         <Button
           classes="arrow arrow-right"
           text="→"
-          onClick={() => updateBoard(Directions.right)}
+          onClick={() => updateBoard(DIRECTIONS.right)}
         />
         <Button
           classes="arrow arrow-down"
           text="↓"
-          onClick={() => updateBoard(Directions.down)}
+          onClick={() => updateBoard(DIRECTIONS.down)}
         />
       </div>
     </div>
