@@ -13,7 +13,7 @@ const BoardView = () => {
     setBoard(new Board());
   };
 
-  const resetBoard = (direction) => {
+  const updateBoard = (direction) => {
     const boardClone = Object.assign(
       Object.create(Object.getPrototypeOf(board)),
       board
@@ -28,7 +28,7 @@ const BoardView = () => {
     // keydown for: left, up, right, down
     if (event.keyCode >= 37 && event.keyCode <= 40) {
       const direction = event.keyCode - 37;
-      resetBoard(direction);
+      updateBoard(direction);
     }
   };
 
@@ -68,22 +68,22 @@ const BoardView = () => {
         <Button
           classes="arrow arrow-left"
           text="←"
-          onClick={() => resetBoard(0)}
+          onClick={() => updateBoard(0)}
         />
         <Button
           classes="arrow arrow-up"
           text="↑"
-          onClick={() => resetBoard(1)}
+          onClick={() => updateBoard(1)}
         />
         <Button
           classes="arrow arrow-right"
           text="→"
-          onClick={() => resetBoard(2)}
+          onClick={() => updateBoard(2)}
         />
         <Button
           classes="arrow arrow-down"
           text="↓"
-          onClick={() => resetBoard(3)}
+          onClick={() => updateBoard(3)}
         />
       </div>
     </div>
